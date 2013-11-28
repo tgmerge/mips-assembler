@@ -2,6 +2,11 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+/**
+ * MIPS汇编器
+ * @author tgmerge
+ *
+ */
 public class Assembler {
 
 	public static void main(String[] args) {

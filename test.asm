@@ -23,5 +23,3 @@ addiu    $sp, $sp, 4
 
 jr         $ra
 add     $zero, $zero, $zero
-
-ble $a, $b, $c

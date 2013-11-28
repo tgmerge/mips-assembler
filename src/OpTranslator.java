@@ -8,7 +8,6 @@ import java.util.Map.Entry;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-
 public class OpTranslator {
 
 	private LinkedHashMap<String, String>  dict;
