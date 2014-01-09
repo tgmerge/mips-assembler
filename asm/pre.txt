@@ -1,0 +1,15 @@
+#.*
+
+# replace comment
+[ \t]+
+ 
+# replace duplicated space with one
+([:,\(\)\-\$]) ?
+$1
+# delete useless space after :,()-$
+(\n) 
+$1
+# delete useless space at the beginning and end
+ (\n)
+$1
+# delete useless space at the beginning and end

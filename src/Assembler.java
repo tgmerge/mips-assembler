@@ -1,3 +1,5 @@
+import java.io.DataOutputStream;
+import java.io.FileOutputStream;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
@@ -60,8 +62,27 @@ public class Assembler {
 			return;
 		}
 
-		System.out.println("[Assembler]Success.");
+		System.out.println("[Assembler]Assemble success.");
 		System.out.println(toHex(str));
+		
+		// write binary file
+		try {
+			DataOutputStream os = new DataOutputStream(new FileOutputStream(path + ".bin"));
+			for (int i = 0; i < str.length(); i += 8) {
+				if(str.charAt(i) == '\n') {
+					i ++;
+				}
+				int bi = Integer.parseInt(str.substring(i, i+8), 2);
+				os.writeByte((byte) bi);
+			}
+			os.close();
+		} catch (IOException e) {
+			System.out.println("[IOException]Failed to write file.");
+			e.printStackTrace();
+			return;
+		}
+		System.out.println("[Assemblr]All done. Output file: " + path + ".bin");
+		
 		return;
 	}
 	
