@@ -15,6 +15,8 @@ by tgmerge
 
 参见Assembler.bat的内容。
 
+test.asm是一个示例。
+
 ## TODO 未完成的特性
 
  * 支持.伪指令
